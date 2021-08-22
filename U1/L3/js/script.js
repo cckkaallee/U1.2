@@ -8,7 +8,6 @@ var hangmanImgNr;   //Holds the numner representing what imagwe to show
 var msgElem;        //Holds the message shown to the user
 var startGameBtn;   //Holds the representation to the start game button
 var letterButtons;  //Holds the representation to all the letter buttons
-var correctLettersCount = 0;// Counts how many letters are correct
 var startTime;      //Holds the start time of the game 
 
 
@@ -79,6 +78,8 @@ function guessLetter() {
     let letter = this.value; //Holds the curret letter 
 
     let letterFound = false; //Flag for if letter is found or not
+
+    let correctLettersCount = 0;// Counts how many letters are correct
 
     for (var i = 0; i < selectedWord.length; i++) {
 
